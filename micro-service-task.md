@@ -1,19 +1,17 @@
 # The Task
 
-Create a micro-service to submit and fetch a credit application using spring boot. Application decision needs to be obtained from an external service which can be configured using wiremock . 
+Create a java spring boot micro-service to submit a credit application and get a decision. Application decision needs to be obtained from an external service which can be configured using wiremock. 
 
 ## Requirements
 
 - Customer should be able to 
-
   - apply for credit and get a decision (accepted, rejected)
   - get the application status
-
 - Application can be stored in in-memory database (H2)
 - Application may contain - customer name, application reference, loan value, decision status
 - Decisioning service  - refer to section `decisioning service`. 
 
-Please provide a solution that best showcases your OO design abilities and is representative of how you would work.
+Please provide a solution that demonstrats your abilities creating a micro-service using spring boot.
 Please document the decisions you made while solving this task (taking shortcuts is okay if they are justified and explained).
 Please make a note of what you skipped or didn't implement and why.
 
@@ -21,7 +19,7 @@ Please make a note of what you skipped or didn't implement and why.
 
 Service will be running on port `9999` and will return a decision outcome as json response
 
-if the loan value is between 500 and 1000 - status is `accepted`, all other cases `rejected`
+If the loan value is between 500 and 1000 - status will be `accepted`, all other cases `rejected`
 
 To set-up wiremock for decisioning service 
 1) Install and run wiremock locally - http://wiremock.org/docs/running-standalone/ 
@@ -41,7 +39,7 @@ curl -X POST \
 
 ```
 
-3) Test the decisioning service
+3) To test the decisioning service
 
 Request - 
 ```
@@ -61,8 +59,8 @@ Response -
 The main evaluation criteria will be:
 
 - API documentation - openapi3 or swagger
-- REST principles and spring boot features
-- Integration test and unit tests
+- REST principles, spring boot features
+- Integration and unit tests
 
 ## Submitting your solution
 
@@ -72,6 +70,6 @@ Either:
 
 Zip up your solution (omitting the vendor folder)
 After committing your changes, create a git bundle from your local repo with:
-	git bundle create solution.bundle master
+	git bundle create solution.bundle main
 	
 Submit your solution via email
